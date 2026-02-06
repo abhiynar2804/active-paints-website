@@ -1,0 +1,173 @@
+/* Navbar: two stacked bars (40px + 40px) */
+nav {
+  position: relative;
+  width: 100%;
+  height: 80px; /* 40 + 40 */
+  box-sizing: border-box;
+}
+
+/* Upper green bar (40px) */
+.upper-base {
+  position: relative;
+  height: 40px;
+  background-color: #C2FEDB;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* contact on right */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Lower white bar (40px) */
+.lower-base {
+  position: relative;
+  height: 40px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* nav items centered */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Logo: spans both bars, 10px margin from top and bottom => height 60px */
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-sizing: border-box;
+  z-index: 6;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Company name split across the two bars */
+.company-name {
+  position: absolute;
+  left: 100px; /* to the right of logo */
+  top: 10px; /* align with top of logo */
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.company-name .name-top {
+  height: 40px; /* sits visually in green bar */
+  display: flex;
+  align-items: center;
+  color: #111;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.company-name .name-bottom {
+  height: 40px; /* sits visually in white bar */
+  display: flex;
+  align-items: center;
+  color: #111;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Centered navigation on the white bar only */
+.middle ul {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.middle a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.middle a:hover {
+  background-color: rgba(53,253,136,0.12);
+  color: #05683a;
+}
+
+/* Contact button on upper green bar */
+.upper-right .contact {
+  padding: 8px 18px;
+  background: #35FD88;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.upper-right .contact:hover { background: #1ed068; }
+
+/* Responsive: Small screens */
+/* On screens smaller than 750px,*/
+@media (max-width: 450px) {
+    .upper-base {
+        padding: 0 20px;
+    }
+
+    .middle {
+        gap: 20px;
+    }
+
+    .name {
+        font-size: 11px;
+    }
+
+    .right button {
+        padding: 6px 14px;
+        font-size: 11px;
+    }
+
+    .logo-container {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Responsive: Small screens */
+/* On screens smaller than 450px, hide the middle navigation and adjust padding and font sizes */
+@media (max-width: 450px) {
+    .upper-base {
+        padding: 0 20px;
+    }
+
+    .middle {
+        display: none;
+    }
+
+    .name {
+        font-size: 11px;
+    }
+
+    .right button {
+        padding: 6px 14px;
+        font-size: 11px;
+    }
+
+    .logo-container {
+        width: 35px;
+        height: 35px;
+    }
+}
