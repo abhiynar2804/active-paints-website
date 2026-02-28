@@ -1,42 +1,42 @@
 /* Navbar: two stacked bars (40px + 40px) */
 nav {
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100%;
-  height: 80px; /* 40 + 40 */
-  box-sizing: border-box;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Upper green bar (40px) */
+/* ========== UPPER BAR ========== */
 .upper-base {
   position: relative;
   height: 40px;
-  background-color: #C2FEDB;
+  background: linear-gradient(135deg, #C2FEDB 0%, #a8f5d1 100%);
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* contact on right */
+  justify-content: flex-end;
   padding: 0 20px;
   box-sizing: border-box;
 }
 
-/* Lower white bar (40px) */
+/* ========== LOWER BAR ========== */
 .lower-base {
   position: relative;
   height: 40px;
   background-color: #ffffff;
   display: flex;
   align-items: center;
-  justify-content: center; /* nav items centered */
+  justify-content: flex-start;
   padding: 0 20px;
   box-sizing: border-box;
+  gap: 40px;
 }
 
-/* Logo: spans both bars, 10px margin from top and bottom => height 60px */
+/* ========== LOGO ========== */
 .logo-container {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-  width: 60px;
-  height: 60px;
+  position: relative;
+  width: 50px;
+  height: 50px;
   background: #ffffff;
   border-radius: 8px;
   display: flex;
@@ -44,7 +44,14 @@ nav {
   justify-content: center;
   padding: 6px;
   box-sizing: border-box;
-  z-index: 6;
+  flex-shrink: 0;
+  border: 2px solid #C2FEDB;
+  transition: all 0.3s ease;
+}
+
+.logo-container:hover {
+  transform: scale(1.05);
+  border-color: #35FD88;
 }
 
 .logo-container img {
@@ -53,37 +60,38 @@ nav {
   object-fit: contain;
 }
 
-/* Company name split across the two bars */
+/* ========== COMPANY NAME ========== */
 .company-name {
-  position: absolute;
-  left: 100px; /* to the right of logo */
-  top: 10px; /* align with top of logo */
-  height: 60px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  z-index: 5;
+  justify-content: center;
+  height: 40px;
+  gap: 2px;
+  flex-shrink: 0;
 }
 
 .company-name .name-top {
-  height: 40px; /* sits visually in green bar */
-  display: flex;
-  align-items: center;
   color: #111;
   font-weight: 700;
   font-size: 16px;
+  line-height: 1;
 }
 
 .company-name .name-bottom {
-  height: 40px; /* sits visually in white bar */
-  display: flex;
-  align-items: center;
-  color: #111;
+  color: #35FD88;
   font-weight: 700;
   font-size: 16px;
+  line-height: 1;
 }
 
-/* Centered navigation on the white bar only */
+/* ========== NAVIGATION MENU ========== */
+.middle {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
 .middle ul {
   display: flex;
   gap: 28px;
@@ -91,6 +99,7 @@ nav {
   padding: 0;
   list-style: none;
   align-items: center;
+  width: 100%;
 }
 
 .middle a {
@@ -98,76 +107,249 @@ nav {
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
-  padding: 6px 8px;
+  padding: 6px 12px;
   border-radius: 4px;
-  transition: background-color .15s ease, color .15s ease;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.middle a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #35FD88;
+  transition: width 0.3s ease;
 }
 
 .middle a:hover {
-  background-color: rgba(53,253,136,0.12);
   color: #05683a;
 }
 
-/* Contact button on upper green bar */
-.upper-right .contact {
-  padding: 8px 18px;
-  background: #35FD88;
+.middle a:hover::after {
+  width: 100%;
+}
+
+/* ========== CONTACT BUTTON ========== */
+.upper-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #35FD88 0%, #1ed068 100%);
   border: none;
   border-radius: 50px;
   font-weight: 600;
+  font-size: 13px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(53, 253, 136, 0.3);
+  white-space: nowrap;
 }
 
-.upper-right .contact:hover { background: #1ed068; }
+.contact:hover {
+  background: linear-gradient(135deg, #1ed068 0%, #15a84f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(53, 253, 136, 0.4);
+}
 
-/* Responsive: Small screens */
-/* On screens smaller than 750px,*/
-@media (max-width: 450px) {
-    .upper-base {
-        padding: 0 20px;
+/* ========== HAMBURGER MENU (hidden on desktop) ========== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ========== RESPONSIVE - TABLET ========== */
+@media (max-width: 1024px) {
+    .lower-base {
+        gap: 30px;
     }
 
-    .middle {
+    .middle ul {
         gap: 20px;
     }
 
-    .name {
-        font-size: 11px;
+    .middle a {
+        font-size: 13px;
+        padding: 5px 10px;
     }
 
-    .right button {
-        padding: 6px 14px;
-        font-size: 11px;
-    }
-
-    .logo-container {
-        width: 35px;
-        height: 35px;
+    .company-name .name-top,
+    .company-name .name-bottom {
+        font-size: 14px;
     }
 }
 
-/* Responsive: Small screens */
-/* On screens smaller than 450px, hide the middle navigation and adjust padding and font sizes */
-@media (max-width: 450px) {
+/* ========== RESPONSIVE - MOBILE ========== */
+@media (max-width: 768px) {
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
     .upper-base {
-        padding: 0 20px;
+        height: 40px;
+        padding: 0 15px;
     }
 
-    .middle {
-        display: none;
-    }
-
-    .name {
-        font-size: 11px;
-    }
-
-    .right button {
-        padding: 6px 14px;
-        font-size: 11px;
+    .lower-base {
+        height: 60px;
+        gap: 15px;
+        padding: 0 15px;
+        position: relative;
     }
 
     .logo-container {
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .company-name .name-top,
+    .company-name .name-bottom {
+        font-size: 14px;
+    }
+
+    .contact {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+        z-index: 1001;
+    }
+
+    /* Mobile menu - FIXED VERSION */
+    .middle {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    .middle.open {
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    .middle ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .middle li {
+        width: 100%;
+    }
+
+    .middle a {
+        display: block;
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .middle a::after {
+        display: none;
+    }
+
+    .middle a:hover {
+        background-color: #f0f8f4;
+        color: #35FD88;
+    }
+}
+
+/* ========== RESPONSIVE - SMALL MOBILE ========== */
+@media (max-width: 480px) {
+    .upper-base {
+        height: 40px;
+        padding: 0 12px;
+    }
+
+    .lower-base {
+        height: 55px;
+        gap: 10px;
+        padding: 0 12px;
+    }
+
+    .logo-container {
+        width: 40px;
+        height: 40px;
+    }
+
+    .company-name .name-top,
+    .company-name .name-bottom {
+        font-size: 13px;
+    }
+
+    .contact {
+        padding: 7px 14px;
+        font-size: 11px;
+    }
+
+    .hamburger {
+        padding: 6px;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2.5px;
+    }
+
+    .middle {
+        top: 95px;
+    }
+
+    .middle.open {
+        max-height: 350px;
+    }
+
+    .middle a {
+        padding: 10px 15px;
+        font-size: 13px;
     }
 }
