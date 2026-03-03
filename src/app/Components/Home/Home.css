@@ -32,6 +32,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .slide-image img {
@@ -39,6 +40,58 @@
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/* ========== SLIDE TEXT CONTENT ========== */
+.slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 80px;
+    background: rgba(0, 0, 0, 0.25);
+    color: #fff;
+    z-index: 5;
+}
+
+.slide-title {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    max-width: 600px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.slide-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 500px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.slide-button {
+    padding: 14px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+.slide-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
 }
 
 /* Swiper navigation styling */
@@ -106,6 +159,18 @@
     .main-swiper .swiper-button-prev::after {
         font-size: 18px;
     }
+
+    .slide-content {
+        padding: 40px 60px;
+    }
+
+    .slide-title {
+        font-size: 42px;
+    }
+
+    .slide-description {
+        font-size: 16px;
+    }
 }
 
 /* ========== RESPONSIVE - MOBILE ========== */
@@ -123,6 +188,24 @@
     .main-swiper .swiper-button-next::after,
     .main-swiper .swiper-button-prev::after {
         font-size: 16px;
+    }
+
+    .slide-content {
+        padding: 30px 40px;
+    }
+
+    .slide-title {
+        font-size: 32px;
+    }
+
+    .slide-description {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    .slide-button {
+        padding: 12px 30px;
+        font-size: 14px;
     }
 }
 
@@ -151,6 +234,25 @@
     .main-swiper .swiper-pagination-bullet {
         width: 8px;
         height: 8px;
+    }
+
+    .slide-content {
+        padding: 20px 25px;
+    }
+
+    .slide-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .slide-description {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .slide-button {
+        padding: 10px 25px;
+        font-size: 12px;
     }
 }
 
