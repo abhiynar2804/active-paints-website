@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Active Paints – Business Website
 
-## Getting Started
+Official website for **Active Paints**, a paint company that manufactures high-quality paints for residential and commercial use.
 
-First, run the development server:
+Built with [Next.js](https://nextjs.org) (v16), [React](https://react.dev) (v19), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com).
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have **Node.js** (v18 or higher) and **npm** installed.
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/abhiynar2804/business-website.git
+cd business-website
+
+# Install dependencies
+npm install
+```
+
+### Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+business-website/
+├── public/                  # Static assets (images, icons, etc.)
+├── src/
+│   └── app/
+│       ├── Components/
+│       │   ├── Navbar/      # Site navigation bar
+│       │   ├── Home/        # Main landing/hero section
+│       │   ├── Footer/      # Site footer
+│       │   └── Sub-Components/  # Shared reusable components
+│       ├── globals.css      # Global styles
+│       ├── layout.tsx       # Root layout with metadata & fonts
+│       └── page.tsx         # Main page entry point
+├── tailwind.config.js       # Tailwind CSS configuration
+├── next.config.ts           # Next.js configuration
+└── tsconfig.json            # TypeScript configuration
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| [Next.js](https://nextjs.org) | 16.1.6 | React framework & SSR |
+| [React](https://react.dev) | 19.2.3 | UI library |
+| [TypeScript](https://www.typescriptlang.org/) | ^5 | Type safety |
+| [Tailwind CSS](https://tailwindcss.com) | ^4 | Utility-first styling |
+| [Swiper](https://swiperjs.com/) | ^12.1.2 | Touch slider / carousel |
+| [Geist Font](https://vercel.com/font) | – | Typography (via `next/font`) |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📦 Available Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the app for production |
+| `npm start` | Start the production server |
+| `npm run lint` | Run ESLint to check for code issues |
+
+---
+
+## ☁️ Deployment
+
+This project is optimized for deployment on [Vercel](https://vercel.com/new), the platform built by the creators of Next.js.
+
+1. Push your code to GitHub.
+2. Import the repository on [vercel.com](https://vercel.com).
+3. Vercel will auto-detect Next.js and deploy instantly.
+
+For more details, see the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+---
+
+## 📄 License
+
+This project is private and proprietary to **Active Paints**. All rights reserved.
