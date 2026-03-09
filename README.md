@@ -2,7 +2,7 @@
 
 Official website for **Active Paints**, a paint company that manufactures high-quality paints for residential and commercial use.
 
-Built with [Next.js](https://nextjs.org) (v16), [React](https://react.dev) (v19), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com).
+Built with [Next.js](https://nextjs.org) (v16.1.6), [React](https://react.dev) (v19), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com).
 
 ---
 
@@ -41,9 +41,9 @@ business-website/
 ├── src/
 │   └── app/
 │       ├── Components/
-│       │   ├── Navbar/      # Site navigation bar
-│       │   ├── Home/        # Main landing/hero section
-│       │   ├── Footer/      # Site footer
+│       │   ├── Navbar/          # Site navigation bar
+│       │   ├── Home/            # Main landing/hero section
+│       │   ├── Footer/          # Site footer
 │       │   └── Sub-Components/  # Shared reusable components
 │       ├── globals.css      # Global styles
 │       ├── layout.tsx       # Root layout with metadata & fonts
