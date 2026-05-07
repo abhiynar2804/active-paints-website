@@ -22,11 +22,11 @@ export default function Navbar() {
             {/* Navigation Links */}
             <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
                 <ul className="nav-links">
+                    <li><a href="#about">About</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#colours">Colours</a></li>
                     <li><a href="#inspiration">Inspiration</a></li>
                     <li><a href="#tools">Tools</a></li>
-                    <li><a href="#about">About</a></li>
                 </ul>
             </div>
 
