@@ -1,7 +1,7 @@
 "use client";
 
 import "./Footer.css";
-import logo from "../../favicon.ico";
+import logo from "../../../../public/Official_logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

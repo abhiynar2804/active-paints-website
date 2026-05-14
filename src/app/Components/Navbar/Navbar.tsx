@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "../../favicon.ico";
+import logo from "../../../../public/Official_logo.png";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +15,6 @@ export default function Navbar() {
                 </div>
                 <div className="brand-text">
                     <h1 className="brand-name">Active Paints</h1>
-                    <p className="brand-tagline">Premium Colors & Finishes</p>
                 </div>
             </div>
 
