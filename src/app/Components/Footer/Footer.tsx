@@ -26,16 +26,16 @@ export default function Footer() {
             <div className="footer-social">
               <h4>Follow Us</h4>
               <div className="social-links">
-                <a href="https://www.facebook.com/share/1KMUQqdUsE/" aria-label="Facebook" className="social-link">
+                <a href="https://www.facebook.com/share/1KMUQqdUsE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="social-link">
                   <span>f</span>
                 </a>
-                <a href="https://www.instagram.com/activepaintofficial/" aria-label="Instagram" className="social-link">
+                <a href="https://www.instagram.com/activepaintofficial/" target="_blank" rel="noopener noreferrer"  aria-label="Instagram" className="social-link">
                   <span>📷</span>
                 </a>
-                <a href="#twitter" aria-label="Twitter" className="social-link">
+                <a href="#twitter" target="_blank" rel="noopener noreferrer"  aria-label="Twitter" className="social-link">
                   <span>𝕏</span>
                 </a>
-                <a href="#linkedin" aria-label="LinkedIn" className="social-link">
+                <a href="#linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-link">
                   <span>in</span>
                 </a>
               </div>
