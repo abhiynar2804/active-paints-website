@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import "./Navbar.css";
-import logo from "../../favicon.ico";
+import logo from "../../../../public/Official_logo.png";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,18 +15,17 @@ export default function Navbar() {
                 </div>
                 <div className="brand-text">
                     <h1 className="brand-name">Active Paints</h1>
-                    <p className="brand-tagline">Premium Colors & Finishes</p>
                 </div>
             </div>
 
             {/* Navigation Links */}
             <div className={`navbar-menu ${menuOpen ? "active" : ""}`}>
                 <ul className="nav-links">
+                    <li><a href="#about">About</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#colours">Colours</a></li>
                     <li><a href="#inspiration">Inspiration</a></li>
                     <li><a href="#tools">Tools</a></li>
-                    <li><a href="#about">About</a></li>
                 </ul>
             </div>
 

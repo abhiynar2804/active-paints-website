@@ -1,7 +1,7 @@
 "use client";
 
 import "./Footer.css";
-import logo from "../../favicon.ico";
+import logo from "../../../../public/Official_logo.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -26,16 +26,16 @@ export default function Footer() {
             <div className="footer-social">
               <h4>Follow Us</h4>
               <div className="social-links">
-                <a href="#facebook" aria-label="Facebook" className="social-link">
+                <a href="https://www.facebook.com/share/1KMUQqdUsE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="social-link">
                   <span>f</span>
                 </a>
-                <a href="#instagram" aria-label="Instagram" className="social-link">
+                <a href="https://www.instagram.com/activepaintofficial/" target="_blank" rel="noopener noreferrer"  aria-label="Instagram" className="social-link">
                   <span>📷</span>
                 </a>
-                <a href="#twitter" aria-label="Twitter" className="social-link">
+                <a href="#twitter" target="_blank" rel="noopener noreferrer"  aria-label="Twitter" className="social-link">
                   <span>𝕏</span>
                 </a>
-                <a href="#linkedin" aria-label="LinkedIn" className="social-link">
+                <a href="#linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="social-link">
                   <span>in</span>
                 </a>
               </div>
@@ -84,16 +84,18 @@ export default function Footer() {
             <div className="footer-contact">
               <p>
                 <strong>Email:</strong><br />
-                <a href="mailto:info@activepaints.com">info@activepaints.com</a>
+                <a href="mailto:graphicsindus@gmail.com">graphicsindus@gmail.com</a>
               </p>
               <p>
                 <strong>Phone:</strong><br />
-                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                <a href="tel:+919422574609">+91 9422574609</a> <br />
+                <a href="tel:+919371199465">+91 9371199465</a> <br />
+                <a href="tel:+919881983132">+91 9881983132</a>
               </p>
               <p>
                 <strong>Address:</strong><br />
-                123 Paint Street<br />
-                Color City, CC 12345
+                A-47, Kinhi MIDC Bhusawal,<br />
+                Dist- Jalgaon 425201, Maharashtra, India
               </p>
             </div>
             <div className="footer-newsletter">

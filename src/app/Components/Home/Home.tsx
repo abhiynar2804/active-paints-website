@@ -2,13 +2,13 @@
 
 import "./Home.css";
 import HomeSub from "../Sub-Components/home/home"
-import image1 from "../../../../public/20260226_183810.png"
-import image2 from "../../../../public/20260226_183935.png"
+import image1 from "../../../../public/Picsart_26-05-15_13-31-19-148.jpg.jpeg"
+import image2 from "../../../../public/file_000000007a387207896df7d97a35352c.png"
 import image3 from "../../../../public/20260226_184118.png"
 import image4 from "../../../../public/20260226_184250.png"
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -51,12 +51,11 @@ export default function Home() {
             <div className="swiper-wrapper-full">
                 <Swiper
                     className="main-swiper"
-                    modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                    modules={[Navigation, Pagination, A11y, Autoplay]}
                     spaceBetween={0}
                     slidesPerView={1}
                     navigation
                     pagination={{ clickable: true }}
-                    scrollbar={{ draggable: true }}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
                     loop={true}
                 >
