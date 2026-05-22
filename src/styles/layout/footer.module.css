@@ -1,0 +1,138 @@
+/*
+ * Footer.module.css
+ * Only contains styles that Tailwind can't express cleanly:
+ *   - ::after pseudo-elements
+ *   - gradient divider
+ *   - custom transition side-effects (padding-left nudge on hover)
+ *   - social link circle hover with colour-swap + lift
+ *   - newsletter input glow ring
+ */
+
+/* ── Section heading underline bar ── */
+.sectionHeading {
+  position: relative;
+}
+
+.sectionHeading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #e74c3c;
+  border-radius: 2px;
+}
+
+/* ── Nav link – subtle left-nudge on hover ── */
+.navLink {
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.navLink:hover {
+  color: #e74c3c;
+  padding-left: 5px;
+}
+
+/* ── Contact links ── */
+.contactLink {
+  color: #e74c3c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #ff6b6b;
+  text-decoration: underline;
+}
+
+/* ── Social icon circles ── */
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.socialLink:hover {
+  background-color: #e74c3c;
+  color: #1a1a2e;
+  transform: translateY(-3px);
+}
+
+/* ── Gradient divider ── */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #34495e, transparent);
+  margin: 2rem 0;
+}
+
+/* ── Newsletter input ── */
+.newsletterInput {
+  flex: 1;
+  min-width: 0;          /* prevents overflow inside flex */
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #34495e;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ecf0f1;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletterInput::placeholder {
+  color: #95a5a6;
+}
+
+.newsletterInput:focus {
+  outline: none;
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+  box-shadow: 0 0 8px rgba(231, 76, 60, 0.3);
+}
+
+/* ── Newsletter button ── */
+.newsletterBtn {
+  padding: 0.65rem 1.4rem;
+  background-color: #e74c3c;
+  color: #1a1a2e;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+}
+
+.newsletterBtn:hover {
+  background-color: #ff6b6b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.35);
+}
+
+/* ── Bottom bar links ── */
+.bottomLink:hover {
+  color: #e74c3c;
+}
+
+/* ── Responsive tweaks that can't be expressed with Tailwind alone ── */
+@media (max-width: 480px) {
+  .sectionHeading::after {
+    width: 28px;
+  }
+
+  .socialLink {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}

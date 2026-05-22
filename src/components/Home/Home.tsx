@@ -1,7 +1,7 @@
 "use client";
 
 import "./Home.css";
-import HomeSub from "../Sub-Components/home/home"
+import HomeSub from "./home/home"
 import image1 from "../../../../public/Picsart_26-05-15_13-31-19-148.jpg.jpeg"
 import image2 from "../../../../public/file_000000007a387207896df7d97a35352c.png"
 import image3 from "../../../../public/20260226_184118.png"
