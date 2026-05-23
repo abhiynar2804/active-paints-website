@@ -3,6 +3,7 @@
 import { useState } from "react";
 import styles from "../../styles/layout/navbar.module.css";
 import logo from "../../../public/Official_logo.png";
+import Link from "next/link";
 
 const NAV_LINKS = [
   { href: "#about",       label: "About" },
@@ -55,9 +56,9 @@ export default function Navbar() {
       {/* ── CTA (right on desktop, right-of-hamburger on mobile) ── */}
       {/* order-3 desktop | order-3 mobile — sits after brand+menu, before hamburger space */}
       <div className="flex items-center gap-2 ml-auto order-3">
-        <button className={styles.ctaBtn}>
+        <Link href="/contact" className={styles.ctaBtn}>
           Contact Us
-        </button>
+        </Link>
 
         {/* ── Hamburger — right of CTA on mobile ── */}
         <button
