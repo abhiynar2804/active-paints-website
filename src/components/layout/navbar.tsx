@@ -6,8 +6,8 @@ import logo from "../../../public/Official_logo.png";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { href: "#about",       label: "About" },
-  { href: "#products",    label: "Products" },
+  { href: "/about",       label: "About" },
+  { href: "/products",    label: "Products" },
   { href: "#colours",     label: "Colours" },
   { href: "#inspiration", label: "Inspiration" },
   { href: "#tools",       label: "Tools" },
