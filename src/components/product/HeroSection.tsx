@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, Download, Link } from "lucide-react";
 import Image from "next/image";
 
 export default function HeroSection() {
@@ -26,8 +26,15 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <button className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
-                Explore Products
+              <button 
+              onClick={() =>
+                document.getElementById("productCategories")?.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                })
+              }
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white font-medium rounded-lg hover:bg-gray-800 transition-colors">
+                  Explore Products
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors">
@@ -41,7 +48,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gray-100">
               <Image
-                src="/images/products-hero.jpg"
+                src="/Paint-cans-circle.jpg"
                 alt="Active Paints product lineup with color swatches and paint cans"
                 fill
                 className="object-cover"

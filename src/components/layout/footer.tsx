@@ -7,7 +7,7 @@ export default function footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-[#ecf0f1] pt-12 pb-4 mt-16 border-t-[3px] border-[#e74c3c] font-sans">
+    <footer className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] text-[#ecf0f1] pt-12 pb-4 border-t-[3px] border-[#e74c3c] font-sans">
       <div className="max-w-[1200px] mx-auto px-6">
 
         {/* Top Grid */}
@@ -64,7 +64,7 @@ export default function footer() {
               Our Products
             </h4>
             <FooterLinks links={[
-              { href: "#products",  label: "Paint Collections" },
+              { href: "/products",  label: "Paint Collections" },
               { href: "#colours",   label: "Colour Palette" },
               { href: "#interior",  label: "Interior Paints" },
               { href: "#exterior",  label: "Exterior Paints" },
@@ -78,7 +78,7 @@ export default function footer() {
               Company
             </h4>
             <FooterLinks links={[
-              { href: "#about",       label: "About Us" },
+              { href: "/about",       label: "About Us" },
               { href: "#inspiration", label: "Inspiration" },
               { href: "#tools",       label: "Paint Tools" },
               { href: "#blog",        label: "Blog & Tips" },
@@ -93,7 +93,7 @@ export default function footer() {
             </h4>
             <FooterLinks links={[
               { href: "#faq",     label: "FAQ" },
-              { href: "#contact", label: "Contact Us" },
+              { href: "/contact", label: "Contact Us" },
               { href: "#privacy", label: "Privacy Policy" },
               { href: "#terms",   label: "Terms & Conditions" },
               { href: "#returns", label: "Returns & Warranty" },

@@ -8,42 +8,42 @@ const categories = [
     icon: Home,
     title: "Interior Paints",
     description: "Elegant finishes that transform your interiors.",
-    image: "/images/category-interior.jpg",
+    image: "/1.jpg.jpeg",
     href: "/products/interior",
   },
   {
     icon: TreePine,
     title: "Exterior Paints",
     description: "Weather protection that lasts long and looks beautiful.",
-    image: "/images/category-exterior.jpg",
+    image: "/2.jpg.jpeg",
     href: "/products/exterior",
   },
   {
     icon: Droplets,
     title: "Waterproofing",
     description: "Complete range of waterproof solutions for all surfaces.",
-    image: "/images/category-waterproofing.jpg",
+    image: "/3.jpg.jpeg",
     href: "/products/waterproofing",
   },
   {
     icon: Paintbrush,
     title: "Primers",
     description: "The perfect base for superior adhesion & durability.",
-    image: "/images/category-primers.jpg",
+    image: "/4.jpg.jpeg",
     href: "/products/primers",
   },
   {
     icon: Factory,
     title: "Industrial Coatings",
     description: "High-performance coatings for industrial environments.",
-    image: "/images/category-industrial.jpg",
+    image: "/4.jpg.jpeg",
     href: "/products/industrial",
   },
 ];
 
 export default function ProductCategories() {
   return (
-    <section className="bg-white py-16 lg:py-24">
+    <section id="productCategories" className="bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-12">
           <div>
