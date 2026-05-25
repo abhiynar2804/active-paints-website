@@ -9,35 +9,35 @@ const categories = [
     title: "Interior Paints",
     description: "Elegant finishes that transform your interiors.",
     image: "/1.jpg.jpeg",
-    href: "/products/interior",
+    href: "#products/interior",
   },
   {
     icon: TreePine,
     title: "Exterior Paints",
     description: "Weather protection that lasts long and looks beautiful.",
     image: "/2.jpg.jpeg",
-    href: "/products/exterior",
+    href: "#products/exterior",
   },
   {
     icon: Droplets,
     title: "Waterproofing",
     description: "Complete range of waterproof solutions for all surfaces.",
     image: "/3.jpg.jpeg",
-    href: "/products/waterproofing",
+    href: "#products/waterproofing",
   },
   {
     icon: Paintbrush,
     title: "Primers",
     description: "The perfect base for superior adhesion & durability.",
     image: "/4.jpg.jpeg",
-    href: "/products/primers",
+    href: "#products/primers",
   },
   {
     icon: Factory,
     title: "Industrial Coatings",
     description: "High-performance coatings for industrial environments.",
     image: "/4.jpg.jpeg",
-    href: "/products/industrial",
+    href: "#products/industrial",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function ProductCategories() {
             <h2 className="text-3xl font-bold text-gray-900">Browse by Category</h2>
           </div>
           <a
-            href="/products/categories"
+            href="#products/categories"
             className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
           >
             View All Categories

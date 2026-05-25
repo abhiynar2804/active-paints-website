@@ -7,7 +7,7 @@ const products = [
   {
     name: "AP Super Acrylic",
     tagline: "Premium acrylic emulsion for interior walls",
-    image: "/images/product-super-acrylic.jpg",
+    image: "/1.jpg.jpeg",
     features: ["High Coverage", "Washable", "Anti Fungal"],
     color: "bg-blue-900",
     slug: "ap-super-acrylic",
@@ -15,7 +15,7 @@ const products = [
   {
     name: "AP Exterior Emulsion",
     tagline: "Weather resistant emulsion for exterior walls",
-    image: "/images/product-exterior-emulsion.jpg",
+    image: "/2.jpg.jpeg",
     features: ["Weather Proof", "UV Resistant", "Long Lasting"],
     color: "bg-green-800",
     slug: "ap-exterior-emulsion",
@@ -23,7 +23,7 @@ const products = [
   {
     name: "AP PU Ultima",
     tagline: "Luxury polyurethane finish for wood & metal",
-    image: "/images/product-pu-ultima.jpg",
+    image: "/3.jpg.jpeg",
     features: ["High Gloss", "Scratch Resistant", "Smooth Finish"],
     color: "bg-amber-800",
     slug: "ap-pu-ultima",
@@ -31,7 +31,7 @@ const products = [
   {
     name: "AP Epoxy Coating",
     tagline: "High build epoxy coating for floors & metal",
-    image: "/images/product-epoxy.jpg",
+    image: "/4.jpg.jpeg",
     features: ["Chemical Resistant", "High Durability", "Excellent Adhesion"],
     color: "bg-gray-800",
     slug: "ap-epoxy-coating",
@@ -39,7 +39,7 @@ const products = [
   {
     name: "AP Water Shield",
     tagline: "Advanced waterproof coating for terraces & exterior",
-    image: "/images/product-water-shield.jpg",
+    image: "/1.jpg.jpeg",
     features: ["100% Waterproof", "Crack Bridging", "Heat Reflective"],
     color: "bg-blue-800",
     slug: "ap-water-shield",
@@ -47,7 +47,7 @@ const products = [
   {
     name: "AP Primer Seal",
     tagline: "Premium primer for strong adhesion",
-    image: "/images/product-primer-seal.jpg",
+    image: "/4.jpg.jpeg",
     features: ["Strong Adhesion", "Quick Drying", "Better Coverage"],
     color: "bg-purple-900",
     slug: "ap-primer-seal",
@@ -66,7 +66,7 @@ export default function FeaturedProducts() {
             <h2 className="text-3xl font-bold text-gray-900">Our Best Sellers</h2>
           </div>
           <a
-            href="/products/all"
+            href="#products/all"
             className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
           >
             View All Products
@@ -107,7 +107,7 @@ export default function FeaturedProducts() {
                   ))}
                 </ul>
                 <a
-                  href={`/products/${product.slug}`}
+                  href={`#products/${product.slug}`}
                   className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-yellow-600 transition-colors"
                 >
                   View Details

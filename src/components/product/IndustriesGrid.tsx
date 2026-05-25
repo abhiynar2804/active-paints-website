@@ -8,25 +8,25 @@ const industries = [
     icon: Home,
     title: "Residential",
     description: "Beautiful spaces, protected inside and out.",
-    image: "/images/industry-residential.jpg",
+    image: "/20260226_183810.png",
   },
   {
     icon: Building2,
     title: "Commercial",
     description: "Reliable coatings for offices and complexes.",
-    image: "/images/industry-commercial.jpg",
+    image: "/20260226_183935.png",
   },
   {
     icon: Factory,
     title: "Industrial",
     description: "High-performance solutions for industrial structures.",
-    image: "/images/industry-industrial.jpg",
+    image: "/20260226_184118.png",
   },
   {
     icon: Landmark,
     title: "Infrastructure",
     description: "Durable protection for critical infrastructure.",
-    image: "/images/industry-infrastructure.jpg",
+    image: "/20260226_184250.png",
   },
 ];
 
