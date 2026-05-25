@@ -204,7 +204,7 @@ import Paints from "../../../public/hero-factory.jpg";
 
 export default function Hero() {
   return (
-    <section className="relative pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden">
+    <section className="relative pt-20 pb-16 lg:pt-20 lg:pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
@@ -214,9 +214,9 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="text-sm font-semibold text-slate-500 mb-4 tracking-wide uppercase">
+            {/* <div className="text-sm font-semibold text-slate-500 mb-4 tracking-wide uppercase">
               Home &gt; About Us
-            </div>
+            </div> */}
             <h1 className="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-tight mb-6">
               About <span className="text-blue-700">Active Paints</span>
             </h1>
