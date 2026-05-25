@@ -199,6 +199,29 @@ const FEATURES = [
   "Expert customer support",
 ];
 
+const handleButtonClick = (text: string) => {
+  switch (text) {
+    case "Get Started":
+      document.getElementById("productsSection")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      break;
+    case "Start Your Transformation":
+      window.location.href = "/contact";
+      break;
+    case "Protect Now":
+      window.location.href = "/products";
+      break;
+    case "Discover More":
+      window.location.href = "/products";
+      break;
+    default:
+      break;
+  }
+};
+
+
 /* ── Component ── */
 
 export default function HomeOn() {
@@ -228,7 +251,8 @@ export default function HomeOn() {
                 <div className={styles.slideContent}>
                   <h1 className={styles.slideTitle}>{slide.title}</h1>
                   <p className={styles.slideDescription}>{slide.description}</p>
-                  <button className={styles.slideButton}>{slide.buttonText}</button>
+                  <button onClick={() => handleButtonClick(slide.buttonText)}
+ className={styles.slideButton}>{slide.buttonText}</button>
                 </div>
               </div>
             </SwiperSlide>
@@ -240,7 +264,7 @@ export default function HomeOn() {
       <div className="w-full relative z-10 bg-[#f5f7fa]">
 
         {/* ── Products section ── */}
-        <section className={styles.homeScroll}>
+        <section id="productsSection" className={styles.homeScroll}>
           <h2>Our Paints &amp; Products</h2>
 
           <div className={styles.cards}>
