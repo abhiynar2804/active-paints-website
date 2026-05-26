@@ -37,10 +37,17 @@ export default function HeroSection() {
                   Explore Products
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <button className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors">
+              {/* <button className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors">
                 <Download className="w-4 h-4" />
                 Download Catalog
-              </button>
+              </button> */}
+              <a
+                href="/catalog.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors">
+                <Download className="w-5 h-5" />
+                Download Catalog
+              </a>
             </div>
           </div>
 

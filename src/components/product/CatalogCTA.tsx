@@ -16,17 +16,24 @@ export default function CatalogCTA() {
             <p className="text-gray-400 text-lg">
               Download our product catalog for complete technical details, application guides, and more.
             </p>
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors">
+            {/* <button className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors">
               <Download className="w-5 h-5" />
               Download Catalog
-            </button>
+            </button> */}
+            <a
+              href="/catalog.pdf"
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition-colors">
+              <Download className="w-5 h-5" />
+              Download Catalog
+            </a>
           </div>
 
           {/* Right Catalog Preview */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-64 aspect-[3/4] rounded-lg overflow-hidden shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
               <Image
-                src="/images/catalog-cover.jpg"
+                src="/catalog.jpeg"
                 alt="Active Paints Product Catalog"
                 fill
                 className="object-cover"
