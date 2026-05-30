@@ -50,14 +50,52 @@ export default function contactform() {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    // Simulate async submission
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
-    console.log('Form submitted:', formData);
+  e.preventDefault();
+  setLoading(true);
+
+  const formObject = {
+    access_key: "bc04c6b2-be63-4a6b-85cb-85328d75da0d",
+
+    name: formData.name,
+    phone: formData.phone,
+    email: formData.email,
+    projectType: formData.projectType,
+    message: formData.message,
   };
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(formObject),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      setSubmitted(true);
+
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        projectType: "",
+        message: "",
+      });
+    } else {
+      console.log("Error", result);
+      alert("Something went wrong!");
+    }
+  } catch (error) {
+    console.log(error);
+    alert("Submission failed!");
+  }
+
+  setLoading(false);
+};
 
   const inputBase =
     'w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:border-amber-400 focus:ring-2 focus:ring-amber-400/20 outline-none transition-all text-slate-800 placeholder:text-slate-400 text-sm input-focus-glow';
