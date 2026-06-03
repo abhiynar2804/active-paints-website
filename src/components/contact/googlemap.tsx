@@ -33,7 +33,7 @@ export default function googlemap() {
         {/* Map container */}
         <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-900/10 border border-slate-100">
           {/* Info Card overlaid on map */}
-          <div className="absolute top-5 right-5 z-10 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl shadow-slate-900/10 p-4 max-w-[260px] border border-slate-100">
+          <div className="hidden sm:block absolute top-5 right-5 z-10 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl shadow-slate-900/10 p-4 max-w-[260px] border border-slate-100">
             {/* Header */}
             <div className="flex items-center gap-3 mb-3">
               <div className="w-10 h-10 bg-rose-100 rounded-xl flex items-center justify-center shrink-0">
