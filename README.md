@@ -1,96 +1,125 @@
-# 🎨 Active Paints – Business Website
+# 🎨 Active Paints Website
 
-Official website for **Active Paints**, a paint company that manufactures high-quality paints for residential and commercial use.
+> Official business website developed for **Active Paints** to establish a professional online presence and showcase the company's products and services.
 
-Built with [Next.js](https://nextjs.org) (v16.1.6), [React](https://react.dev) (v19), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com).
+🌐 **Live Demo:** https://YOUR-LIVE-LINK
 
 ---
 
-## 🚀 Getting Started
+# 📖 Overview
 
-### Prerequisites
+This project is a modern, responsive business website built for **Active Paints**. The goal was to create a clean, professional, and user-friendly website that improves the company's digital presence and allows customers to explore products and company information with ease.
 
-Make sure you have **Node.js** (v18 or higher) and **npm** installed.
+---
 
-### Installation
+# ✨ Features
+
+- Modern & Professional UI
+- Fully Responsive Design
+- Product Showcase
+- Company Information
+- Contact Section
+- Fast Performance
+- Mobile-Friendly Layout
+
+---
+
+# 🛠 Tech Stack
+
+### Frontend
+
+- React
+- JavaScript
+- HTML5
+- CSS3
+- Tailwind CSS *(Remove if not used)*
+
+### Deployment
+
+- Vercel
+
+---
+
+# 📸 Screenshots
+
+## Home Page
+
+> Add homepage screenshot here.
+
+## Products Section
+
+> Add products section screenshot here.
+
+## Mobile View
+
+> Add mobile screenshot here.
+
+---
+
+# 🚀 Getting Started
+
+## Clone Repository
 
 ```bash
-# Clone the repository
 git clone https://github.com/abhiynar2804/business-website.git
-cd business-website
+```
 
-# Install dependencies
+## Install Dependencies
+
+```bash
 npm install
 ```
 
-### Development Server
+## Start Development Server
 
 ```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
-
----
-
-## 📁 Project Structure
-
-```
-business-website/
-├── public/                  # Static assets (images, icons, etc.)
-├── src/
-│   └── app/
-│       ├── Components/
-│       │   ├── Navbar/          # Site navigation bar
-│       │   ├── Home/            # Main landing/hero section
-│       │   ├── Footer/          # Site footer
-│       │   └── Sub-Components/  # Shared reusable components
-│       ├── globals.css      # Global styles
-│       ├── layout.tsx       # Root layout with metadata & fonts
-│       └── page.tsx         # Main page entry point
-├── tailwind.config.js       # Tailwind CSS configuration
-├── next.config.ts           # Next.js configuration
-└── tsconfig.json            # TypeScript configuration
+npm start
 ```
 
 ---
 
-## 🛠️ Tech Stack
+# 📂 Project Structure
 
-| Technology | Version | Purpose |
-|-----------|---------|---------|
-| [Next.js](https://nextjs.org) | 16.1.6 | React framework & SSR |
-| [React](https://react.dev) | 19.2.3 | UI library |
-| [TypeScript](https://www.typescriptlang.org/) | ^5 | Type safety |
-| [Tailwind CSS](https://tailwindcss.com) | ^4 | Utility-first styling |
-| [Swiper](https://swiperjs.com/) | ^12.1.2 | Touch slider / carousel |
-| [Geist Font](https://vercel.com/font) | – | Typography (via `next/font`) |
-
----
-
-## 📦 Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start the development server |
-| `npm run build` | Build the app for production |
-| `npm start` | Start the production server |
-| `npm run lint` | Run ESLint to check for code issues |
+```
+src/
+├── components/
+├── assets/
+├── pages/
+├── styles/
+└── App.jsx
+```
 
 ---
 
-## ☁️ Deployment
+# 🎯 Project Goals
 
-This project is optimized for deployment on [Vercel](https://vercel.com/new), the platform built by the creators of Next.js.
-
-1. Push your code to GitHub.
-2. Import the repository on [vercel.com](https://vercel.com).
-3. Vercel will auto-detect Next.js and deploy instantly.
-
-For more details, see the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+- Build a professional online identity for Active Paints
+- Improve customer accessibility
+- Create a responsive and modern interface
+- Deliver a clean and maintainable codebase
 
 ---
 
-## 📄 License
+# 🔮 Future Improvements
 
-This project is private and proprietary to **Active Paints**. All rights reserved.
+- Product Search
+- Product Categories
+- Admin Dashboard
+- Inquiry Form
+- SEO Optimization
+- Performance Improvements
+
+---
+
+# 👨‍💻 Developer
+
+**Abhay Narkhede**
+
+- GitHub: https://github.com/abhiynar2804
+- LinkedIn: https://www.linkedin.com/in/abhay-narkhede-016376282
+- Portfolio: https://YOUR-PORTFOLIO-LINK
+
+---
+
+⭐ If you found this project interesting, consider giving it a star.
+````
