@@ -2,7 +2,7 @@
 
 > Official business website developed for **Active Paints** to establish a professional online presence and showcase the company's products and services.
 
-🌐 **Live Demo:** https://YOUR-LIVE-LINK
+🌐 **Live Demo:** https://activepaints.netlify.app/
 
 ---
 
@@ -32,7 +32,7 @@ This project is a modern, responsive business website built for **Active Paints*
 - JavaScript
 - HTML5
 - CSS3
-- Tailwind CSS *(Remove if not used)*
+- Tailwind CSS
 
 ### Deployment
 
@@ -61,7 +61,7 @@ This project is a modern, responsive business website built for **Active Paints*
 ## Clone Repository
 
 ```bash
-git clone https://github.com/abhiynar2804/business-website.git
+git clone https://github.com/abhiynar2804/active-paints-website.git
 ```
 
 ## Install Dependencies
@@ -117,7 +117,7 @@ src/
 
 - GitHub: https://github.com/abhiynar2804
 - LinkedIn: https://www.linkedin.com/in/abhay-narkhede-016376282
-- Portfolio: https://YOUR-PORTFOLIO-LINK
+- Portfolio: https://abhayportfolio-narkhede.vercel.app/
 
 ---
 
