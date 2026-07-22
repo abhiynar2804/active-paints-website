@@ -1,13 +1,9 @@
-import Navbar from "./Components/Navbar/Navbar";
-import Home from "./Components/Home/Home";
-import Footer from "./Components/Footer/Footer";
+import Home from "../Components/Home/Home";
 
 export default function HomeSection() {
   return (
     <main>
-      <Navbar />
       <Home />
-      <Footer />
     </main>
   );
 }

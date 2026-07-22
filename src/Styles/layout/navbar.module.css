@@ -1,0 +1,200 @@
+/*
+ * Navbar.module.css
+ * Pseudo-elements, animated underline, mobile drawer,
+ * hamburger X transforms, CTA gradient hover, brand hover.
+ */
+
+/* ── Brand ── */
+.brand {
+  transition: transform 0.3s ease;
+}
+.brand:hover {
+  transform: scale(1.02);
+}
+
+/* Logo wrapper — NO fixed width on desktop so it doesn't push layout */
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.logoWrapper:hover {
+  transform: translateY(-2px);
+}
+
+/* Brand name as a span — avoids h1 browser margin */
+.brandName {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* ── Nav menu — desktop ── */
+.menu {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 40px;
+}
+
+/* ── Nav link with expanding underline ── */
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 12px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #35FD88, #1ed068);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover { color: #35FD88; }
+.navLink:hover::before { width: calc(100% - 24px); }
+
+/* ── CTA button ── */
+.ctaBtn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #35FD88, #1ed068);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(53, 253, 136, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ctaBtn:hover {
+  background: linear-gradient(135deg, #1ed068, #15a84f);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(53, 253, 136, 0.4);
+}
+.ctaBtn:active { transform: translateY(-1px); }
+
+/* ── Hamburger — hidden on desktop, shown on mobile ── */
+.hamburger {
+  display: none;          /* desktop: hidden */
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* X transforms */
+.bar1Active { transform: rotate(45deg) translate(10px, 10px); }
+.bar2Active { opacity: 0; }
+.bar3Active { transform: rotate(-45deg) translate(8px, -8px); }
+
+/* ════════════════════════════════
+   RESPONSIVE — tablet (1024px)
+════════════════════════════════ */
+@media (max-width: 1024px) {
+  .menu { margin: 0 24px; }
+  .navLink { font-size: 14px; }
+  .brandName { font-size: 18px; }
+  .ctaBtn { padding: 10px 22px; font-size: 13px; }
+}
+
+/* ════════════════════════════════
+   RESPONSIVE — mobile (≤ 768px)
+   Hamburger appears, drawer slides in
+════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .hamburger { display: flex; }
+
+  /* Nav drawer — collapsed by default */
+  .menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    margin: 0;
+    flex: unset;
+    background: #fff;
+    flex-direction: column;
+    overflow: hidden;
+    border-bottom: 2px solid #C2FEDB;
+    z-index: 999;
+    transition: height 0.4s ease-in-out;
+  }
+
+  /* Drawer open */
+  .menuOpen { height: calc(100vh - 70px); }
+
+  /* Links stack vertically */
+  .menu ul {
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .menu li { width: 100%; }
+
+  .navLink {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+  }
+
+  /* No underline animation inside drawer */
+  .navLink::before { display: none; }
+  .navLink:hover { background-color: #f0f8f4; }
+
+  .brandName { font-size: 16px; }
+  .ctaBtn { padding: 9px 18px; font-size: 13px; }
+}
+
+/* ════════════════════════════════
+   RESPONSIVE — small mobile (≤ 480px / 425px)
+════════════════════════════════ */
+@media (max-width: 480px) {
+  .menu { top: 65px; }
+  .menu ul { padding: 15px 0; }
+
+  .navLink { padding: 12px 16px; font-size: 14px; }
+
+  .brandName { font-size: 14px; }
+
+  .ctaBtn { padding: 8px 14px; font-size: 12px; }
+
+  .hamburger span { width: 22px; height: 2.5px; }
+}
