@@ -1,9 +1,9 @@
-import HeroSection from '@/Components/contact/herosection';
-import ContactCards from '@/Components/contact/contactcard';
-import ContactForm from '@/Components/contact/contactform';
-import BusinessInquiry from '@/Components/contact/businessinquiry';
-import GoogleMap from '@/Components/contact/googlemap';
-import FinalCTA from '@/Components/contact/finalcta';
+import HeroSection from '@/Components/contact/HeroSection';
+import ContactCards from '@/Components/contact/ContactCard';
+import ContactForm from '@/Components/contact/ContactForm';
+import BusinessInquiry from '@/Components/contact/BusinessInquiry';
+import GoogleMap from '@/Components/contact/GoogleMap';
+import FinalCTA from '@/Components/contact/FinalCTA';
 
 export default function ContactPage() {
   return (

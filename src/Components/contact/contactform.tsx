@@ -38,7 +38,7 @@ const projectTypes = [
   'Other',
 ];
 
-export default function contactform() {
+export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',

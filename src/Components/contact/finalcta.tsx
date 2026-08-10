@@ -11,7 +11,7 @@ const highlights = [
   { icon: '💼', text: 'B2B Support' },
 ];
 
-export default function finalCTA() {
+export default function FinalCTA() {
   return (
     <section className="relative py-20 lg:py-28 bg-slate-900 overflow-hidden">
       {/* Background Image with multi-stop overlay */}

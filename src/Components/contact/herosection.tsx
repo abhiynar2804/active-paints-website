@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { MessageCircle, Phone } from 'lucide-react';
 import PaintImage from '../../../public/finalCTA.jpeg';
 
-export default function herosection() {
+export default function HeroSection() {
   return (
     <section className="relative w-full bg-gradient-to-br from-slate-50 via-white to-amber-50/40 overflow-hidden">
       {/* Decorative blobs */}

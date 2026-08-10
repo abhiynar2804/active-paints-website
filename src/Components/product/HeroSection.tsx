@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Download, Link } from "lucide-react";
+import { ArrowRight, Download} from "lucide-react";
 import Image from "next/image";
 
 export default function HeroSection() {

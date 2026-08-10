@@ -2,7 +2,7 @@
 
 import { MapPin, Navigation, Clock, Phone, ExternalLink } from 'lucide-react';
 
-export default function googlemap() {
+export default function GoogleMap() {
   return (
     <section className="relative bg-white py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

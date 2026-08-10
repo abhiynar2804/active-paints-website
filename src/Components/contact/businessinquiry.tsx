@@ -29,7 +29,7 @@ const inquiryTypes = [
   },
 ];
 
-export default function businessinquiry() {
+export default function BusinessInquiry() {
   return (
     <section className="py-16 lg:py-20 relative bg-slate-900 overflow-hidden">
       {/* Decorative elements */}
