@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "../Components/layout/Navbar";
 import Footer from "../Components/layout/Footer";
+import FloatingWhatsApp from "@/Components/layout/FloatingWhatsApp";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <FloatingWhatsApp />
         <Footer />
       </body>
     </html>
