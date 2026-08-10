@@ -15,11 +15,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Active Paints",
+export const metadata = {
+  title: {
+    default: 'Active Paints',
+    template: '%s | Active Paints',
+  },
   description:
-    "Official website of Active Paints, a paint company which manufactures high-quality paints for residential and commercial use.",
-};
+    'Premium interior, exterior, waterproof and industrial paint solutions for homes, commercial buildings and projects across India.',
+  keywords: [
+    'paint manufacturer',
+    'interior paint',
+    'exterior paint',
+    'waterproof paint',
+    'industrial paint',
+    'wall paint',
+    'Active Paints',
+  ],
+}
 
 export default function RootLayout({
   children,
