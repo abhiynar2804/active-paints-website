@@ -105,7 +105,7 @@
 "use client";
 
 import { Award, CheckCircle2, ShieldCheck, FileCheck } from "lucide-react";
-import { useScrollAnimation } from "../../hooks/about/UseScrollAnimation";
+import { useScrollAnimation } from '../../hooks/about/UseScrollAnimation';
 
 const highlights = [
   {

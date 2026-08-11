@@ -232,7 +232,7 @@
 "use client";
 
 import { Shield, FlaskConical, Palette, Headset, Leaf } from "lucide-react";
-import { useScrollAnimation } from "../../hooks/about/UseScrollAnimation";
+import { useScrollAnimation } from '../../hooks/about/UseScrollAnimation';
 
 const features = [
   {
