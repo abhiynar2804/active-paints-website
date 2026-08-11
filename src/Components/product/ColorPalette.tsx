@@ -220,8 +220,12 @@ function isLight(hex: string) {
 }
 
 export default function ColorPalette() {
-  const [hovered, setHovered] = useState<{ name: string; hex: string } | null>(null);
-  const [tapped, setTapped] = useState<{ name: string; hex: string } | null>(null);
+  const [hovered, setHovered] = useState<{ name: string; hex: string } | null>(
+    null,
+  );
+  const [tapped, setTapped] = useState<{ name: string; hex: string } | null>(
+    null,
+  );
   const [activeGroup, setActiveGroup] = useState("All");
 
   const allGroups = ["All", ...colorGroups.map((g) => g.label)];
@@ -233,9 +237,11 @@ export default function ColorPalette() {
   const preview = hovered || tapped;
 
   return (
-    <section className="bg-white py-12 border-b border-slate-100">
+    <section
+      id="colour-palette"
+      className="bg-white py-12 border-b border-slate-100"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Header row */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-7">
           <div>
@@ -270,7 +276,6 @@ export default function ColorPalette() {
 
         {/* Colour grid + preview panel */}
         <div className="flex gap-96 items-stretch">
-
           {/* Rows */}
           <div className="space-y-5 min-w-0">
             {filtered.map((group) => (
@@ -281,7 +286,10 @@ export default function ColorPalette() {
                 </span>
 
                 {/* Swatches — horizontal scroll */}
-                <div className="overflow-x-auto flex-1" style={{ scrollbarWidth: "none" }}>
+                <div
+                  className="overflow-x-auto flex-1"
+                  style={{ scrollbarWidth: "none" }}
+                >
                   <div className="flex gap-2 w-max">
                     {group.colors.map((color, i) => (
                       <div
@@ -289,14 +297,19 @@ export default function ColorPalette() {
                         className="group relative flex-shrink-0 cursor-pointer"
                         onMouseEnter={() => setHovered(color)}
                         onMouseLeave={() => setHovered(null)}
-                        onClick={() => setTapped(tapped?.hex === color.hex ? null : color)}
+                        onClick={() =>
+                          setTapped(tapped?.hex === color.hex ? null : color)
+                        }
                       >
                         {/* Swatch */}
                         <div
                           className="w-10 h-10 rounded-xl border border-black/[0.07] shadow-sm hover:scale-125 hover:rounded-lg hover:shadow-md transition-all duration-200 hover:z-10 relative"
                           style={{
                             backgroundColor: color.hex,
-                            outline: tapped?.hex === color.hex ? "2px solid #1e293b" : "none",
+                            outline:
+                              tapped?.hex === color.hex
+                                ? "2px solid #1e293b"
+                                : "none",
                             outlineOffset: "2px",
                           }}
                         />
@@ -325,10 +338,14 @@ export default function ColorPalette() {
                   className="w-10 h-10 rounded-full border-2 border-white shadow-md"
                   style={{ backgroundColor: preview.hex }}
                 />
-                <span className={`text-[13px] font-bold text-center px-2 leading-tight ${isLight(preview.hex) ? "text-slate-700" : "text-white"}`}>
+                <span
+                  className={`text-[13px] font-bold text-center px-2 leading-tight ${isLight(preview.hex) ? "text-slate-700" : "text-white"}`}
+                >
                   {preview.name}
                 </span>
-                <span className={`text-[11px] font-mono ${isLight(preview.hex) ? "text-slate-400" : "text-white/70"}`}>
+                <span
+                  className={`text-[11px] font-mono ${isLight(preview.hex) ? "text-slate-400" : "text-white/70"}`}
+                >
                   {preview.hex}
                 </span>
               </>
@@ -338,7 +355,6 @@ export default function ColorPalette() {
               </span>
             )}
           </div>
-
         </div>
 
         {/* Mobile tap preview strip */}
@@ -352,10 +368,14 @@ export default function ColorPalette() {
                 className="w-6 h-6 rounded-full border-2 border-white shadow flex-shrink-0"
                 style={{ backgroundColor: tapped.hex }}
               />
-              <span className={`text-sm font-bold ${isLight(tapped.hex) ? "text-slate-700" : "text-white"}`}>
+              <span
+                className={`text-sm font-bold ${isLight(tapped.hex) ? "text-slate-700" : "text-white"}`}
+              >
                 {tapped.name}
               </span>
-              <span className={`text-xs font-mono ${isLight(tapped.hex) ? "text-slate-400" : "text-white/60"}`}>
+              <span
+                className={`text-xs font-mono ${isLight(tapped.hex) ? "text-slate-400" : "text-white/60"}`}
+              >
                 {tapped.hex}
               </span>
             </>
@@ -365,7 +385,6 @@ export default function ColorPalette() {
             </span>
           )}
         </div>
-
       </div>
     </section>
   );

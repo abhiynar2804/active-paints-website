@@ -24,6 +24,9 @@ export const metadata = {
     'Premium interior, exterior, waterproof and industrial paint solutions for homes, commercial buildings and projects across India.',
   keywords: [
     'paint manufacturer',
+    'paint supplier',
+    'paint in bhusawal',
+    'paint in jalgaon',
     'interior paint',
     'exterior paint',
     'waterproof paint',

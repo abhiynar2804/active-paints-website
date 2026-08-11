@@ -84,7 +84,7 @@ import { motion, Variants } from "framer-motion";
 import { Users, Factory, MapPin, Calendar } from "lucide-react";
 
 const stats = [
-  { icon: Users, val: "500+", label: "Happy Customers" },
+  { icon: Users, val: "1000+", label: "Happy Customers" },
   { icon: Factory, val: "50+", label: "Products" },
   { icon: MapPin, val: "10+", label: "Cities Served" },
   { icon: Calendar, val: "5+", label: "Years of Experience" },

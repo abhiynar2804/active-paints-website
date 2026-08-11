@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "../../Styles/layout/Footer.module.css";
-import logo from "../../../public/Official_logo.png";
+import logo from "../../../public/logo.png";
 import Image from "next/image";
 
 export default function Footer() {
@@ -18,7 +18,7 @@ export default function Footer() {
               <Image
                 src={logo}
                 alt="Active Paints logo"
-                width={140}
+                width={100}
                 height={70}
                 className="h-auto w-auto"
               />
@@ -79,10 +79,10 @@ export default function Footer() {
             <FooterLinks
               links={[
                 { href: "/products", label: "Paint Collections" },
-                { href: "#colours", label: "Colour Palette" },
-                { href: "#interior", label: "Interior Paints" },
-                { href: "#exterior", label: "Exterior Paints" },
-                { href: "#specialty", label: "Specialty Coatings" },
+                { href: "/products/colour-palette", label: "Colour Palette" },
+               // { href: "#interior", label: "Interior Paints" },
+               // { href: "#exterior", label: "Exterior Paints" },
+               // { href: "#specialty", label: "Specialty Coatings" },
               ]}
             />
           </div>
@@ -97,31 +97,17 @@ export default function Footer() {
             <FooterLinks
               links={[
                 { href: "/about", label: "About Us" },
-                { href: "#inspiration", label: "Inspiration" },
-                { href: "#tools", label: "Paint Tools" },
-                { href: "#blog", label: "Blog & Tips" },
-                { href: "#careers", label: "Careers" },
+                { href: "/contact", label: "Contact Us" },
+                //{ href: "#inspiration", label: "Inspiration" },
+                //{ href: "#tools", label: "Paint Tools" },
+                //{ href: "#blog", label: "Blog & Tips" },
+                //{ href: "#careers", label: "Careers" },
               ]}
             />
           </div>
 
           {/* Support */}
-          <div>
-            <h4
-              className={`text-[1.05rem] font-bold mb-5 text-[#ecf0f1] pb-2 ${styles.sectionHeading}`}
-            >
-              Support & Info
-            </h4>
-            <FooterLinks
-              links={[
-                { href: "#faq", label: "FAQ" },
-                { href: "/contact", label: "Contact Us" },
-                { href: "#privacy", label: "Privacy Policy" },
-                { href: "#terms", label: "Terms & Conditions" },
-                { href: "#returns", label: "Returns & Warranty" },
-              ]}
-            />
-          </div>
+          {/* in below the whole code commented */}
 
           {/* Contact & Newsletter */}
           <div>
@@ -234,3 +220,26 @@ function FooterLinks({ links }: { links: Link[] }) {
     </ul>
   );
 }
+
+
+
+
+
+{/*
+  <div>
+            <h4
+              className={`text-[1.05rem] font-bold mb-5 text-[#ecf0f1] pb-2 ${styles.sectionHeading}`}
+            >
+              Support & Info
+            </h4>
+            <FooterLinks
+              links={[
+                { href: "#faq", label: "FAQ" },
+                { href: "/contact", label: "Contact Us" },
+                { href: "#privacy", label: "Privacy Policy" },
+                { href: "#terms", label: "Terms & Conditions" },
+                { href: "#returns", label: "Returns & Warranty" },
+              ]}
+            />
+          </div>
+          */}

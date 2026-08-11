@@ -76,9 +76,9 @@ export default function BusinessInquiry() {
             {/* Stats row */}
             <div className="grid grid-cols-3 gap-4">
               {[
-                { val: '50+', label: 'Active Dealers' },
-                { val: '15+', label: 'Years in Business' },
-                { val: '500+', label: 'Happy Clients' },
+                { val: '100+', label: 'Active Dealers' },
+                { val: '5+', label: 'Years in Business' },
+                { val: '1000+', label: 'Happy Clients' },
               ].map((s) => (
                 <div key={s.label} className="text-center bg-white/5 rounded-2xl py-4 px-2 border border-white/10">
                   <p className="text-2xl font-extrabold text-amber-400">{s.val}</p>

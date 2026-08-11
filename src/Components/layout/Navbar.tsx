@@ -7,14 +7,15 @@ import { usePathname } from "next/navigation";
 import { Phone, MessageCircle } from "lucide-react";
 
 import styles from "../../Styles/layout/Navbar.module.css";
-import logo from "../../../public/Official_logo.png";
+import logo from "../../../public/logo.png";
 
 const NAV_LINKS = [
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/products", label: "Products" },
-  { href: "#colours", label: "Colours" },
-  { href: "#inspiration", label: "Inspiration" },
-  { href: "#tools", label: "Tools" },
+  { href: "/products#colour-palette", label: "Colours" },
+  // { href: "#inspiration", label: "Inspiration" },
+  // { href: "#tools", label: "Tools" },
 ];
 
 const PHONE_NUMBER = "+91XXXXXXXXXX";

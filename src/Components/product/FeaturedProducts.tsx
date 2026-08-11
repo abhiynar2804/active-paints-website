@@ -83,7 +83,7 @@ export default function FeaturedProducts() {
               {/* Product Image / Color Block */}
               <div className={`relative aspect-square ${product.color} flex items-center justify-center`}>
                 <div className="text-center text-white p-8">
-                  <div className="w-24 h-32 mx-auto mb-4 relative">
+                  <div className="w-200 h-90 mx-auto mb-4 relative">
                     <Image
                       src={product.image}
                       alt={product.name}

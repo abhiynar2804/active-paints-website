@@ -74,14 +74,14 @@ const FEATURES = [
 
 const TESTIMONIALS = [
   {
-    name: "Rohit Sharma",
-    role: "Homeowner, Pune",
+    name: "Rakesh Patil",
+    role: "Homeowner, Bhusawal",
     quote:
       "The finish quality is excellent and the color still looks fresh after two monsoons. Very satisfied with Active Paints.",
   },
   {
-    name: "Meera Desai",
-    role: "Interior Designer, Mumbai",
+    name: "Deepak Joshi",
+    role: "Interior Designer, Jalgaon",
     quote:
       "Easy application, smooth coverage, and consistent shades across batches. We now recommend Active Paints for residential projects.",
   },
@@ -187,7 +187,7 @@ export default function Home() {
       <section className="bg-[#0f172a] py-14 px-6 md:px-12 lg:px-20">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <h3 className="text-3xl md:text-4xl font-bold text-white">15+</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-white">5+</h3>
             <p className="text-gray-300 mt-2">Years of Experience</p>
           </div>
 
@@ -202,7 +202,7 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="text-3xl md:text-4xl font-bold text-white">25+</h3>
+            <h3 className="text-3xl md:text-4xl font-bold text-white">50+</h3>
             <p className="text-gray-300 mt-2">Paint Products</p>
           </div>
         </div>

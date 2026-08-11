@@ -41,7 +41,7 @@ export default function CatalogCTA() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4">
                 <p className="text-white font-bold text-lg">ACTIVE PAINTS</p>
-                <p className="text-white/80 text-sm">Product Catalog 2024</p>
+                <p className="text-white/80 text-sm">Product Catalog 2026</p>
               </div>
             </div>
           </div>
